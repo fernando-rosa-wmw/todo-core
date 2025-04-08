@@ -30,4 +30,9 @@ public class MemoryTodoRepository implements ITodoRepository {
        return createdTodo;
     }
 
+    @Override
+    public List<Todo> listTodos() {
+        return this.todos;
+    }
+
 }
