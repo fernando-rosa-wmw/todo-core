@@ -1,5 +1,8 @@
 package org.acme.web.todo;
 
+import java.util.List;
+
+import org.acme.components.todo.domain.entity.Todo;
 import org.acme.components.todo.infra.mongo.repositories.MongoTodoRepository;
 
 import jakarta.inject.Inject;
@@ -26,4 +29,10 @@ public class TodoRouter {
         String name, 
         String limitDate
     ) {}
+
+    @Path("/listAll")
+    @POST
+    public List<Todo> listAll() {
+        return this.todoController.listAll();
+    }
 }

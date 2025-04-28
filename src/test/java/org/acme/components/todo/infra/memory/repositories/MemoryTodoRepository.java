@@ -30,4 +30,10 @@ public class MemoryTodoRepository implements ITodoRepository {
        return createdTodo;
     }
 
+    @Override
+    public List<Todo> getAll() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'listAll'");
+    }
+
 }
