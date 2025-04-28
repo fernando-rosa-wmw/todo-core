@@ -32,7 +32,9 @@ public class TodoRouter {
 
     @Path("/listAll")
     @POST
-    public List<Todo> listAll() {
-        return this.todoController.listAll();
+    public ListAllOutput listAll() {
+        return new ListAllOutput(this.todoController.listAll());
     }
+
+    public record ListAllOutput(List<Todo> todoList) {}
 }
