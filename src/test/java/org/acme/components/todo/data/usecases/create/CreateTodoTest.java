@@ -22,7 +22,7 @@ class CreateTodoTest {
 
         Output output = createTodo.execute(new Input("Fazer cafe", "2025-04-08"));
 
-        Assertions.assertEquals("Criado Corretamente", output.message());
+        Assertions.assertEquals("Criado Corretamente - Id 10L", output.message());
     }
 
     @Test
